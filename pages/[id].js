@@ -1,8 +1,7 @@
-// pages/[id].js
+const urlDatabase = global.urlDatabase || {};
+
 export async function getServerSideProps({ params, res }) {
   const id = params.id;
-  const urlDatabase = global.urlDatabase || {};
-
   const data = urlDatabase[id];
 
   if (data) {
